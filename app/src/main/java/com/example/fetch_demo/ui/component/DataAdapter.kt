@@ -205,7 +205,7 @@ class DataAdapter: RecyclerView.Adapter<RecyclerView.ViewHolder>() {
          * @param isExpanded Whether this group is currently expanded
          */
         fun bind(listId: Int, isExpanded: Boolean) {
-            tvListId.text = "ListID: $listId"
+            tvListId.text = itemView.context.getString(R.string.format_list_id, listId)
             expandedBtn.setImageResource(
                 if (isExpanded) android.R.drawable.arrow_down_float
                 else android.R.drawable.arrow_up_float
@@ -232,9 +232,12 @@ class DataAdapter: RecyclerView.Adapter<RecyclerView.ViewHolder>() {
          * @param item The data item to display
          */
         fun bind(item: FetchDemoDataItem) {
-            tvId.text = "ID: ${item.id}"
-            tvListId.text = "ListID: ${item.listId}"
-            tvName.text = "Name: ${item.name ?: "N/A"}"
+            tvId.text = itemView.context.getString(R.string.format_id, item.id)
+            tvListId.text = itemView.context.getString(R.string.format_list_id, item.listId)
+            tvName.text = itemView.context.getString(
+                R.string.format_name,
+                item.name ?: itemView.context.getString(R.string.no_name)
+            )
         }
     }
 }

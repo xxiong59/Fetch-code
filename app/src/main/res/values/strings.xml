@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">Fetch-demo</string>
+    <string name="format_id">ID: %1$d</string>
+    <string name="format_list_id">ListID: %1$d</string>
+    <string name="format_name">Name: %1$s</string>
+    <string name="no_name">N/A</string>
 </resources>

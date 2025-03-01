@@ -2,7 +2,6 @@ package com.example.fetch_demo
 
 import android.os.Bundle
 import android.view.View
-import android.widget.Button
 import android.widget.ProgressBar
 import android.widget.TextView
 import androidx.activity.ComponentActivity
@@ -28,7 +27,6 @@ class MainActivity : ComponentActivity() {
      */
     private lateinit var recyclerView: RecyclerView
     private lateinit var progressBar: ProgressBar
-    private lateinit var switchDataDisplayModeButton: Button
     private lateinit var tvEmpty: TextView
 
     /**
@@ -65,7 +63,6 @@ class MainActivity : ComponentActivity() {
         // Find views
         recyclerView = findViewById(R.id.recyclerView)
         progressBar = findViewById(R.id.progressBar)
-        switchDataDisplayModeButton = findViewById(R.id.btnSwitchDataMode)
         tvEmpty = findViewById(R.id.tvEmpty)
 
         // Set up RecyclerView
