@@ -2,7 +2,6 @@ package com.example.fetch_demo.view_model
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
-import com.example.fetch_demo.data.BaseRepository
 import com.example.fetch_demo.data.FetchDataRepository
 
 class DataViewModelFactory(

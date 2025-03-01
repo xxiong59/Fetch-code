@@ -1,12 +1,9 @@
 package com.example.fetch_demo.view_model
 
 import android.util.Log
-import android.widget.Toast
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
-import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.example.fetch_demo.data.BaseRepository
 import com.example.fetch_demo.data.FetchDataRepository
 import com.example.fetch_demo.data.FetchDemoDataItem
 import kotlinx.coroutines.launch

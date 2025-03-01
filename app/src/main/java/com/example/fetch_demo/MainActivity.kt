@@ -6,22 +6,14 @@ import android.widget.Button
 import android.widget.ProgressBar
 import android.widget.TextView
 import androidx.activity.ComponentActivity
-import androidx.activity.compose.setContent
-import androidx.activity.enableEdgeToEdge
-import androidx.compose.foundation.layout.fillMaxSize
-import androidx.compose.foundation.layout.padding
-import androidx.compose.material3.Scaffold
-import androidx.compose.material3.Text
-import androidx.compose.runtime.Composable
-import androidx.compose.ui.Modifier
-import androidx.compose.ui.tooling.preview.Preview
+import androidx.core.content.ContextCompat
 import androidx.lifecycle.ViewModelProvider
+import androidx.recyclerview.widget.DividerItemDecoration
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.fetch_demo.data.FetchDataRepository
 import com.example.fetch_demo.network.FetchApiService
 import com.example.fetch_demo.ui.component.DataAdapter
-import com.example.fetch_demo.ui.theme.FetchdemoTheme
 import com.example.fetch_demo.view_model.DataViewModel
 import com.example.fetch_demo.view_model.DataViewModelFactory
 
@@ -59,6 +51,11 @@ class MainActivity : ComponentActivity() {
         dataAdapter = DataAdapter()
         recyclerView.layoutManager = LinearLayoutManager(this)
         recyclerView.adapter = dataAdapter
+        val divider = DividerItemDecoration(this, LinearLayoutManager.VERTICAL)
+        ContextCompat.getDrawable(this, R.drawable.divider_layout)?.let {
+            divider.setDrawable(it)
+        }
+        recyclerView.addItemDecoration(divider)
     }
 
     private fun initRepository() {

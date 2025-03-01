@@ -1,6 +1,5 @@
 package com.example.fetch_demo.data
 
-import android.util.Log
 import com.example.fetch_demo.network.FetchApiService
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.withContext
